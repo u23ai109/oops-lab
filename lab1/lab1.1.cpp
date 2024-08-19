@@ -1,11 +1,12 @@
  #include<iostream>
  
  using namespace std;
-
+//creating structure
 struct post{
 float weight;
 float cost;
 
+//function that calculates the cost wrt given weights
 void costs(){
     if(weight<=50){
         cost=0.05*weight;
@@ -18,13 +19,14 @@ void costs(){
     }
 }
 
+//function to display the cost
 void display(){
 cout<<"cost is "<<cost<<endl;
 }
 };
 
 int main(){
-    post p1;
+    post p1;//creating object of created structure
     cout<<"enter weight"<<endl;
     cin>>p1.weight;
 
