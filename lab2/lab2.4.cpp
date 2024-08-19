@@ -3,6 +3,7 @@
 
 using namespace std;
 
+//creating class with given variables
 class student{
     int admno;
     string name;
@@ -10,12 +11,14 @@ class student{
     float mat;
     float sci;
     float total;
-    
+
+//inline function that returns the sum of all subjects
      inline float compute(int eng,int mat,int sci){
         return eng + mat + sci;
     }
 
     public:
+//function to input all subjects' marks ,calculate and display total marks
     void readData(){
         cout<<"enter admission no "<<endl;
         cin>>admno;
@@ -31,10 +34,11 @@ class student{
         cout<<"total marks are "<<total<<endl;
 
     }
-    
+   //declaring a function inside class 
     void showData();
 };
 
+//defining declared function using scope resolution operator
 void student :: showData(){
         cout<<"your name is "<<name<<endl;
         cout<<"your admission no is "<<admno<<endl;
@@ -45,7 +49,8 @@ void student :: showData(){
     }
 
 int main(){
-    student sarath;
+    student sarath; //creating object
+    //calling member function of object
     sarath.readData();
     sarath.showData();
 }
